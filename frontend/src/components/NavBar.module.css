@@ -9,9 +9,13 @@
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0; 
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; 
 }
+
+
 
 /* Logo Section */
 .brandContainer {
