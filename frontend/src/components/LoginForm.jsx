@@ -1,27 +1,91 @@
+import { useState } from 'react';
 import Button from '../components/Button';
-import { Link } from 'react-router-dom';
-function LoginForm(){
-    return(
+// import {Link} from ''
+
+function LoginForm() {
+    const [formData, setFormData] = useState({ username: '', password: '' });
+    const [errors, setErrors] = useState({ username: '', password: '' });
+
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({ ...formData, [id]: value });
+        setErrors({ ...errors, [id]: '' }); // Clear error on input
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let validationErrors = {};
+
+        if (!formData.username) {
+            validationErrors.username = 'Please enter your email.';
+        }
+        if (!formData.password) {
+            validationErrors.password = 'Please enter your password.';
+        }
+
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+        } else {
+            // Proceed with login logic
+            console.log('Login successful', formData);
+        }
+    };
+
+    return (
         <div>
             <div className="w-full">
-                <form class="bg-white">
+                <form className="bg-white" onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="email">
+                        <label
+                            className="block text-gray-700 text-xl font-bold mb-2"
+                            htmlFor="username"
+                        >
                             Email
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email"></input> 
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                                errors.username && 'border-red-500'
+                            }`}
+                            id="username"
+                            type="text"
+                            placeholder="Email"
+                            value={formData.username}
+                            onChange={handleChange}
+                        />
+                        {errors.username && (
+                            <p className="text-red-500 text-sm mt-1">
+                                {errors.username}
+                            </p>
+                        )}
                     </div>
-                    <div class="mb-6">
-                        <label class="block text-gray-700 text-xl font-bold mb-2" htmlFor="password">
+                    <div className="mb-6">
+                        <label
+                            className="block text-gray-700 text-xl font-bold mb-2"
+                            htmlFor="password"
+                        >
                             Password
                         </label>
-                        <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"></input>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                                errors.password && 'border-red-500'
+                            }`}
+                            id="password"
+                            type="password"
+                            placeholder="******************"
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
+                        {errors.password && (
+                            <p className="text-red-500 text-sm mt-1">
+                                {errors.password}
+                            </p>
+                        )}
                     </div>
-                    <Link to = "/"><Button message="Login"> </Button></Link>
+                    <Button message="Login" />
                 </form>
             </div>
         </div>
     );
-
 }
+
 export default LoginForm;
