@@ -18,13 +18,13 @@ const NavBar = () => {
       {/* Navigation Links */}
       <ul className={styles.navLinks}>
         <li>
-          <a href="/#home">Home</a> {/* Absolute links to ensure proper navigation */}
+          <a href="/#home">Home</a> 
         </li>
         <li>
-          <a href="/#about">About</a> {/* Absolute links for Home page sections */}
+          <a href="/#about">About</a> 
         </li>
         <li className={styles.dropdown}>
-          <Link to="/courses">Courses ▾</Link> {/* Courses main page */}
+          <Link to="/courses">Courses ▾</Link> 
           <ul className={styles.dropdownMenu}>
             <li>
               <Link to="/credit-score">Credit Score</Link>

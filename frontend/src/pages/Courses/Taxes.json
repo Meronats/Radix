@@ -1,0 +1,117 @@
+[
+    {
+        "type": "article",
+        "title": "Understanding U.S. Taxes",
+        "body": [
+            "Taxes are money that people pay to the government. As an international student, understanding U.S. taxes is important because you must file tax forms each year while studying in America.",
+            "When you work in the U.S., you pay different types of taxes:",
+            "• Federal Income Tax - Money paid to the U.S. government",
+            "• State Income Tax - Money paid to your state",
+            "• Social Security and Medicare - Special taxes for retirement and healthcare",
+            "Important Tax Due Dates:",
+            "• January: You get your tax forms (W-2, 1098-T)",
+            "• April 15: Deadline to file your tax return",
+            "Special Rules for International Students:",
+            "• You use different tax forms than U.S. students",
+            "• You might pay different tax rates",
+            "• Some countries have special tax agreements with the U.S.",
+            "• You need to report money from jobs, scholarships, and grants"
+        ]
+    },
+    {
+        "type": "quiz",
+        "title": "Quick Check",
+        "questions": [
+            {
+                "id": 1,
+                "question": "When is the main tax deadline in the U.S.?",
+                "options": [
+                    "January 1st",
+                    "April 15th",
+                    "July 4th",
+                    "December 31st"
+                ],
+                "correct": 1,
+                "explanation": "Tax returns are due by April 15th each year"
+            }
+        ]
+    },
+    {
+        "type": "article",
+        "title": "Important Tax Forms",
+        "body": [
+            "As an international student, you need to know these forms:",
+            "Form W-2:",
+            "• Shows how much you earned from your job",
+            "• Lists taxes already taken from your paycheck",
+            "• Your employer sends this by January 31st",
+            "Form 1098-T:",
+            "• Shows your tuition payments",
+            "• Lists scholarship and grant money",
+            "• Your school sends this form",
+            "Form 1040NR:",
+            "• The main tax form for international students",
+            "• You use this to report all your income",
+            "• Shows if you get money back or need to pay more"
+        ]
+    },
+    {
+        "type": "flashcard",
+        "title": "Tax Forms",
+        "front": "What information is on Form W-2?",
+        "back": [
+            "Your total income from work",
+            "Taxes already paid from paychecks",
+            "Your employer's information",
+            "Social Security taxes paid"
+        ]
+    },
+    {
+        "type": "flashcard",
+        "title": "Tax Forms",
+        "front": "What is Form 1040NR?",
+        "back": [
+            "The main tax return for non-residents",
+            "Used to report all your income",
+            "Shows if you get a refund",
+            "Must be filed by April 15th"
+        ]
+    },
+    {
+        "type": "article",
+        "title": "Tax Terms You Need to Know",
+        "body": [
+            "Here are important words you'll see when doing taxes:",
+            "Income:",
+            "• Money you earn from jobs",
+            "• Scholarship money that isn't for tuition",
+            "• Interest from bank accounts",
+            "Deductions:",
+            "• Education expenses you can subtract",
+            "• Some school supplies and books",
+            "• Student loan interest payments",
+            "Tax Credits:",
+            "• Money that reduces your taxes",
+            "• Some education expenses qualify",
+            "• Different rules apply for international students"
+        ]
+    },
+    {
+        "type": "quiz",
+        "title": "Test Your Knowledge",
+        "questions": [
+            {
+                "id": 2,
+                "question": "Which form shows your school payments?",
+                "options": [
+                    "W-2",
+                    "1098-T",
+                    "1040NR",
+                    "W-4"
+                ],
+                "correct": 1,
+                "explanation": "Form 1098-T shows your tuition and scholarship information"
+            }
+        ]
+    }
+]
