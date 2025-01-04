@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 
 function SignUpForm() {
     const [formData, setFormData] = useState({ username: '', email: '', password: '' });
     const [errors, setErrors] = useState({ username: '', email: '', password: '' });
+    const navigate = useNavigate(); // Initialize the navigate function
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -28,8 +30,11 @@ function SignUpForm() {
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
         } else {
-            // Proceed with form submission
-            console.log('Form submitted', formData);
+            // Mock sign-up logic; replace with real API call
+            console.log('Sign-up successful', formData);
+
+            // Redirect to the courses page
+            navigate('/courses');
         }
     };
 
@@ -91,7 +96,7 @@ function SignUpForm() {
                             Password
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
                                 errors.password && 'border-red-500'
                             }`}
                             id="password"
@@ -106,7 +111,9 @@ function SignUpForm() {
                             </p>
                         )}
                     </div>
+                    <div className=" w-full">
                         <Button message="Sign Up" />
+                    </div>
                 </form>
             </div>
         </div>

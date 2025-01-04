@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
-// import {Link} from ''
 
 function LoginForm() {
     const [formData, setFormData] = useState({ username: '', password: '' });
     const [errors, setErrors] = useState({ username: '', password: '' });
+    const navigate = useNavigate(); // Initialize the navigate function
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -26,8 +27,11 @@ function LoginForm() {
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
         } else {
-            // Proceed with login logic
+            // Mock login logic; replace with real authentication logic
             console.log('Login successful', formData);
+
+            // Redirect to the courses page
+            navigate('/courses');
         }
     };
 
@@ -81,7 +85,9 @@ function LoginForm() {
                             </p>
                         )}
                     </div>
-                    <Button message="Login" />
+                    <div className="w-full">
+                        <Button message="Login" />
+                    </div>
                 </form>
             </div>
         </div>
